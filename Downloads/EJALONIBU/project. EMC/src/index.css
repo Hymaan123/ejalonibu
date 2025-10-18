@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom animations for welding effects */
+@keyframes spark {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-20px) translateX(10px) scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px) translateX(20px) scale(0.5);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-30px) translateX(15px);
+  }
+}
+
+@keyframes arc {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scaleX(0.8);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scaleX(1.2);
+  }
+}
+
+@keyframes arc-bright {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scaleX(0.9);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scaleX(1.1);
+  }
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(251, 146, 60, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(251, 146, 60, 0.8), 0 0 30px rgba(251, 146, 60, 0.6);
+  }
+}
+
+/* Animation classes */
+.animate-spark {
+  animation: spark 2s infinite;
+}
+
+.animate-float {
+  animation: float 3s infinite;
+}
+
+.animate-arc {
+  animation: arc 1.5s infinite;
+}
+
+.animate-arc-bright {
+  animation: arc-bright 1.2s infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 4s infinite;
+}
+
+.animate-glow {
+  animation: glow 3s infinite;
+}
+
+/* Animation delays */
+.animation-delay-1000 {
+  animation-delay: 1s;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+/* Gradient utilities */
+.bg-gradient-radial {
+  background: radial-gradient(circle, var(--tw-gradient-stops));
+}
